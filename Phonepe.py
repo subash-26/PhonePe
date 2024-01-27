@@ -1,6 +1,50 @@
 import os
 import json
 import pandas as pd
+import numpy as np
+
+import pymysql
+import mysql.connector
+import streamlit as st
+import plotly.express as px
+from streamlit_option_menu import option_menu
+
+import PIL
+from PIL import Image
+
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import plotly as plot
+from geopandas import plotting
+import requests
+import json
+from sqlalchemy.engine import URL
+from sqlalchemy import create_engine
+
+
+
+
+
+
+
+
+
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="DatascienceProject098",
+)
+
+print(mydb)
+mycursor = mydb.cursor(buffered=True)
+
+
+alchemydb= create_engine('mysql+mysqlconnector://root:DatascienceProject098@localhost/Phonepe')
+
+
+#Dashboard Configuratin
+st.set_page_config(layout='wide', page_title='PhonePe Data Analysis')
 
 
 #Transcation_Aggerate
