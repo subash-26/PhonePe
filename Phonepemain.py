@@ -27,7 +27,16 @@ cursor = mydb.cursor(buffered=True)
 
 alchemydb= create_engine('mysql+mysqlconnector://root:DatascienceProject098@localhost/Phonepe')
 
-st.set_page_config(layout='wide', page_title='PhonePe Data Analysis')
+
+st.set_page_config(page_title="PhonePe Data Analysis",
+                   page_icon= '	:money_with_wings:',
+                   layout="wide",
+                   initial_sidebar_state="expanded",
+                   menu_items={'About': """Guvi Capstone Project"""})
+st.markdown("<h1 style='text-align: center; color: #FFFFFF;'><i>PhonePe</i> Data Analysis</h1>",
+            unsafe_allow_html=True)
+
+st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
 
 page_be_image = f"""
 <style>
@@ -46,14 +55,14 @@ background-color: #87CEFA;
 
 st.markdown(page_be_image,unsafe_allow_html=True)
 
-selected = option_menu('Phonepe Data Visualization',
+selected = option_menu(None,
                        options = ["About","Analysis","Insights",],
                        icons = ["bar-chart","toggles","at"],
                        default_index=0,
                        orientation="horizontal",
                        styles={"container": {"width": "100%"},
-                               "icon": {"color": "violet", "font-size": "24px"},
-                               "nav-link": {"font-size": "24px","color":"#007bff", "text-align": "center", "margin": "-2px"},
+                               "icon": {"color": "violet", "font-size": "20px"},
+                               "nav-link": {"font-size": "20px","color":"#007bff", "text-align": "center", "margin": "-2px"},
                                "nav-link-selected": {"background-color": "#6F36AD"}})
 
 
